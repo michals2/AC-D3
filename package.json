@@ -19,12 +19,16 @@
     }
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "concurrently \"http-server ./tests/\" \"open http://localhost:8080\""
   },
   "readme": "https://github.com/AC-D3/AC-D3#readme",
   "author": "",
   "license": "MIT",
   "dependencies": {
     "d3": "^4.8.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "http-server": "^0.10.0"
   }
 }
